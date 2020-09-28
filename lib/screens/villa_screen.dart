@@ -42,7 +42,7 @@ class _VillaScreenState extends State<VillaScreen> {
                   ],
                 ),
                 child: Hero(
-                  tag: widget.villa.imageUrl,
+                  tag: widget.villa.nama,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30.0),
                     child: Image(

@@ -1,28 +1,30 @@
 import 'package:sewa_villa/models/activity_model.dart';
+import 'package:sewa_villa/profile_matching.dart';
 
 import 'activity_model.dart';
 
 class Villa {
-  String imageUrl;
-  String description;
-  String nama;
-  int harga;
-  var jarakLat;
-  var jarakLong;
-  int kapasitas;
-  List fasilitas;
-  List<Activity> activities;
+  final String imageUrl;
+  final String description;
+  final String nama;
+  final int harga;
+  final int kapasitas;
+  final List<String> fasilitas;
+  final List<Activity> activities;
+  final double latitude;
+  final double longitude;
+  int get fasilitasLength => fasilitas.length;
 
-  Villa({
+  const Villa({
     this.imageUrl,
     this.description,
     this.nama,
     this.harga,
-    this.jarakLat,
-    this.jarakLong,
     this.kapasitas,
     this.fasilitas,
     this.activities,
+    this.latitude,
+    this.longitude,
   });
 }
 
@@ -33,8 +35,30 @@ List<Villa> villas = [
     description: 'Kunjungi untuk ketenangan untuk meditasi.',
     harga: 1000000,
     kapasitas: 120,
-    jarakLat: -6.910925,
-    jarakLong: 107.755293,
+    latitude: -6.910925,
+    longitude: 107.755293,
+    fasilitas: ['Parkiran 4x4', 'Dapur'],
+    activities: activities,
+  ),
+  Villa(
+    nama: 'Villa 2',
+    imageUrl: 'assets/images/curugcimahi.jpg',
+    description: 'Kunjungi villa 1.',
+    harga: 800000,
+    kapasitas: 130,
+    latitude: -6.811541,
+    longitude: 107.622722,
+    fasilitas: ['Parkiran 4x4', 'Dapur'],
+    activities: activities,
+  ),
+  Villa(
+    nama: 'Villa 3',
+    imageUrl: 'assets/images/curugcimahi.jpg',
+    description: 'Kunjungi villa 2.',
+    harga: 1500000,
+    kapasitas: 160,
+    latitude: -6.924936,
+    longitude: 107.717547,
     fasilitas: ['Parkiran 4x4', 'Dapur'],
     activities: activities,
   ),
